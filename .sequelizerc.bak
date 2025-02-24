@@ -1,0 +1,22 @@
+import path from 'node:path';
+
+// module.exports = {
+//     config: path.resolve('.', './src/config/index.ts'),
+//     'models-path': path.resolve('./src/models'),
+//     'seeders-path': path.resolve('./src/db/seeders'),
+//     'migrations-path': path.resolve('./src/db/migrations')
+//   };
+
+export const config = path.resolve('.', './src/config/index.ts');
+export const modelsPath = path.resolve('./src/models');
+export const seedersPath = path.resolve('./src/db/seeders');
+export const migrationsPath = path.resolve('./src/db/migrations');
+
+// Alternatively, you can export all as a single object
+export default {
+  config,
+  modelsPath,
+  seedersPath,
+  migrationsPath
+};
+

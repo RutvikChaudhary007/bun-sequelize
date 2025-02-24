@@ -1,0 +1,43 @@
+{
+	"name": "bun-sequelize",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"engines": {
+		"node": ">=22.X.X",
+		"bun": ">=1.2.3",
+		"bunx": ">=1.2.3"
+	},
+	"scripts": {
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@commitlint/cli": "^19.7.1",
+		"@commitlint/config-conventional": "^19.7.1",
+		"@types/bun": "latest",
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"@types/node": "^22.13.5",
+		"@types/validator": "^13.12.2",
+		"create": "^0.4.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.4.3"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"cors": "2.8.5",
+		"express": "4.21.2",
+		"mysql2": "3.12.0",
+		"pg": "8.13.3",
+		"pg-hstore": "2.3.4",
+		"reflect-metadata": "0.2.2",
+		"sequelize": "6.37.5",
+		"sequelize-typescript": "2.1.6"
+	},
+	"lint-staged": {
+		"src/**/*.{js,ts}": ["biome check --write"]
+	}
+}
