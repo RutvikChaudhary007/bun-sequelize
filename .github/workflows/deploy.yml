@@ -20,3 +20,4 @@ jobs:
         TEST: ${{ secrets.TEST }}
       run: |
         echo "secret: $TEST"
+        echo "secret: ${#TEST}"
