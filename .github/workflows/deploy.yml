@@ -15,7 +15,9 @@ jobs:
     environment: Test
     steps:
     - uses: actions/checkout@v4
-
+    - uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
     - name: print secrets
       env: 
         TEST: ${{ secrets.TEST }}
@@ -23,3 +25,6 @@ jobs:
         echo "secret: $TEST"
         echo "NODE_VERSION: $NODE_VERSION"
         echo "secret: ${#TEST}"
+    - name: Run bun
+      run: |
+        bun install                    # Install dependencies
